@@ -1,0 +1,14 @@
+<div *ngIf="project">
+    <h1>{{project.title}}</h1>
+    <h2>What is it, anyway?</h2>
+    <div [innerHtml] = "project.fullDescr"></div>
+    <div *ngIf="project.infoLearned">
+        <h2>What I learned</h2>
+        <div [innerHtml] = "project.infoLearned"></div>
+    </div>
+    <div *ngIf="project.refactoring">
+        <h2>Looking Back</h2>
+        <div [innerHtml] = "project.refactoring"></div>
+    </div>
+    <button type="button" routerLink="/WorkSamples">All Projects</button>
+</div>

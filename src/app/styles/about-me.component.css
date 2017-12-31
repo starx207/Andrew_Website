@@ -1,0 +1,15 @@
+div#img-closeups { margin-bottom: 5%; }
+
+@media only screen and (min-width: 768px) {
+    h1 { padding-top: 20px; }
+    div#img-closeups { margin-bottom: 3.5%;}
+}
+
+@media only screen and (min-width: 992px) {
+    h1 { padding-top: 35px; }
+    div#img-closeups { margin-bottom: 2%; }
+}
+
+@media only screen and (min-width: 1200px) {
+    h1 { padding-top: 50px; }
+}

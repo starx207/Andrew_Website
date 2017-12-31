@@ -1,0 +1,21 @@
+<h1>Projects</h1>
+
+<div class="row">
+    <blockquote cite="Batman Begins" [ngClass]="{'col-xs-11': true, 'pull-right': isScreenXS()}">
+        It's not who I am underneath, but what I do that defines me.
+        <small>Batman</small>
+    </blockquote>
+</div>
+
+<div *ngFor="let project of projects">
+    <h2>
+        {{project.title}}
+        <small *ngIf="companies">
+            ({{getCompany(project.companyId)}})
+        </small>
+    </h2>
+    <h3 *ngIf="project.software">Developed For: {{project.software}}</h3>
+    <span class="badge" *ngFor="let tag of project.tags">{{tag}}</span>
+    <p>{{project.shortDescr}}</p>
+    <button type="button" (click)="navigateTo(project)">Find Out More</button>
+</div>

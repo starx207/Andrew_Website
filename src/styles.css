@@ -1,0 +1,197 @@
+* {
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  background-image: url("img/drum-warehouse-dark.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-attachment: fixed;
+  background-position: 75%;
+}
+
+h1 { 
+    color: red;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+h2 small {
+    color: #DDD;
+    font-style: italic;
+    font-size: 0.55em;
+    margin: 0;
+}
+
+h3 {
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1em;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    padding: 6px 0!important;
+    margin: 0;
+}
+
+hr {
+  margin: 0;
+}
+
+p { 
+    font-size: 1.3em;
+    padding: 0 2%;
+}
+
+blockquote {
+    font-style: italic;
+    font-size: 1em;
+    margin-right: 10px;
+}
+blockquote small {
+    font-size: 0.75em;
+    color: #AAA;
+}
+
+button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 7%;
+    padding: 2% 6%;
+    letter-spacing: 0.1em;
+}
+
+button:hover {
+    background-color: rgba(256, 256, 256, 0.2);
+    border-color: red;
+}
+
+ul {
+    list-style-type: none;
+}
+
+div.project img {
+    width: 100%;
+    margin: 5px 0;
+}
+
+div.project ul {
+    list-style-type: square;
+    font-size: 1.2em;
+}
+
+div.snapshot a.blog-slider {
+    padding: 0 15px 0 0;
+}
+
+div.project h3 { font-style: italic; }
+
+div.snapshot a.slicer {
+    float: left;
+    width: 40%;
+    margin: 0 15px 5px 0;
+    padding: 0;
+}
+
+div.taxbill-template a.bill-example,
+div.informal-website a.error-snippet {
+    float: left;
+    width: 40%;
+    margin-right: 10px;
+}
+div.informal-website ul {
+    list-style-type: none;
+}
+div.informal-website ul li {
+    width: 100%;
+    text-align: center;
+}
+div.informal-website ul a {
+    color: red;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+div.informal-website ul a:hover {
+    color: white;
+}
+
+div.taxbill-template a.dot-net-example {
+    float: right;
+    width: 40%;
+    margin-left: 10px;
+}
+
+div.admin-site a.repository-snippet {
+    float: right;
+    width: 40%;
+}
+
+@media only screen and (min-width: 768px) {
+    h1 { font-size: 3em; }
+    h2 { font-size: 2.5em; }
+    h2 small { font-size: 0.7em;}
+    h3 { font-size: 2em; }
+    h4 { font-size: 1.5em;}
+    p { font-size: 1.8em; }
+    button {
+        font-size: 1.3em;
+        padding: 1.5% 3%;
+    }
+    blockquote {
+        font-size: 1.5em;
+    }
+    blockquote small {
+        font-size: 1em;
+    }
+    div.project ul { font-size: 1.7em; }
+
+    #size-indicator { color: red; }
+}
+
+@media only screen and (min-width: 992px) {
+    h1 { font-size: 4em; }
+    h2 { font-size: 3.5em; }
+    h3 { font-size: 2.5em;}
+    h4 { font-size: 2em; }
+    button { 
+        font-size: 1.5em;
+        padding: 1% 1.5%;
+        margin-bottom: 3%;
+    }
+    blockquote { 
+        margin-left: 30px; 
+        font-size: 1.8em;
+    }
+    blockquote small { font-size: 0.9em; }
+    div.snapshot a.slicer {
+        width: 20%;
+    }
+    div.informal-website ul { font-size: 2em; }
+
+    #size-indicator { color: green; }
+}
+
+@media only screen and (min-width: 1200px) {
+    blockquote {
+        margin-left: 70px;
+    }
+    div.taxbill-template a.bill-example { width: 20%; }
+    #size-indicator { color: blue; }
+}

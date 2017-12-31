@@ -1,0 +1,53 @@
+<h1>Alma Maters</h1>
+
+<div class="row">
+    <blockquote cite="Albert Einstein" [ngClass]="{'col-xs-11': true, 'pull-right': isScreenXS()}">
+        Education is what remains after one has forgotten what one has learned in school.
+        <small>Albert Einstein</small>
+    </blockquote>
+</div>
+
+<div *ngFor="let college of colleges">
+    <div class="row">
+        <h2 class="col-lg-10">{{college.name}} <small>{{college.abbreviation}}</small></h2>
+    </div>
+    <h3><em>{{college.city}}, {{college.state}}</em></h3>
+    <div class="row">
+        <h4 class="col-xs-4 col-sm-3 col-lg-2">Degree:</h4>
+        <p class="col-xs-8 col-sm-9 col-lg-10">{{college.degree}}</p>
+    </div>
+    <div class="row">
+        <h4 class="col-xs-4 col-sm-3 col-lg-2">
+            <span *ngIf="college.majors.length > 1; then multiMajor else singleMajor"></span>
+        </h4>
+        <p class="col-xs-8 col-sm-9 col-lg-10">{{stringifyMajors(college)}}</p>
+    </div>
+    <div class="row" *ngIf="college.minor">
+        <h4 class="col-xs-4 col-sm-3 col-lg-2">Minor:</h4>
+        <p class="col-xs-8 col-sm-9 col-lg-10">{{college.minor}}</p>
+    </div>
+    <div class="row" *ngIf="college.gpa">
+        <h4 class="col-xs-4 col-sm-3 col-lg-2">GPA:</h4>
+        <p class="col-xs-8 col-sm-9 col-lg-10">{{college.gpa}}</p>
+    </div>
+    <div class="row">
+        <h4 class="col-xs-4 col-sm-3 col-lg-2">Graduated:</h4>
+        <p class="col-xs-8 col-sm-9 col-lg-10">{{college.graduationDate.toDateString()}}</p>
+    </div>
+
+    <ng-template #multiMajor>Majors:</ng-template>
+    <ng-template #singleMajor>Major:</ng-template>
+</div>
+
+<div *ngIf="highSchool">
+    <h2>{{highSchool.name}} High School</h2>
+    <h3><em>{{highSchool.city}}, {{highSchool.state}}</em></h3>
+    <div class="row">
+        <h4 class="col-xs-4 col-sm-3 col-lg-2">GPA:</h4>
+        <p class="col-xs-8 col-sm-9 col-lg-10">{{highSchool.gpa}}</p>
+    </div>
+    <div class="row">
+        <h4 class="col-xs-4 col-sm-3 col-lg-2">Graduated:</h4>
+        <p class="col-xs-8 col-sm-9 col-lg-10">{{highSchool.graduationDate.toDateString()}}</p>
+    </div>
+</div>

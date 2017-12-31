@@ -1,0 +1,41 @@
+<div class="container">
+    <div id="top-of-page"></div>
+    <div id="veil"></div>
+    <div class="row main-nav-container">
+        <button type="button" routerLink="Home" id="home-button" (click)="hideMenu()">
+                <span class="glyphicon glyphicon-home"></span>
+        </button>
+        <div class="nav-main row" id="nav-main">
+            <ul>
+                <li class="col-xs-12">
+                    <button type="button" routerLink="AboutMe" (click)="hideMenu()">About Me</button>
+                </li>
+                <li class="col-xs-12">
+                    <button type="button" routerLink="WorkSamples" (click)="hideMenu()">Experience</button>
+                </li>
+                <li class="col-xs-12">
+                    <button type="button" routerLink="Education" (click)="hideMenu()">Education</button>
+                </li>
+            </ul>
+        </div>
+        <button type="button" class="nav-toggle" id="nav-toggle" (click)="toggleMenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+        </button>
+    </div>
+    <div class="nav-secondary row">
+        <div class="work-sub-menu hidden col-xs-6 col-sm-offset-2 col-sm-4">
+            <button type="button" routerLink="WorkSamples" routerLinkActive="active-link">
+                Projects
+            </button>
+        </div>
+        <div class="work-sub-menu hidden col-xs-6 col-sm-4">
+            <button type="button" routerLink="WorkExperience" routerLinkActive="active-link">
+                Jobs
+            </button>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+    <div id="size-indicator"></div>
+</div>

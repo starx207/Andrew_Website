@@ -1,0 +1,18 @@
+<div *ngIf="job">
+    <div class="row">
+        <h1 class="col-lg-10">{{job.company}}</h1>
+    </div>
+    <div *ngIf="job.companyDesc" class="row">
+        <div class="col-lg-7">
+            <h2>About {{job.compAbbr}}</h2>
+            <div [innerHtml] = "job.companyDesc"></div>
+        </div>
+    </div>
+    <div *ngIf="job.jobDesc" class="row">
+        <div class="col-lg-7">
+            <h2>My responsibilities as a <span [innerHtml] = "job.title"></span></h2>
+            <div [innerHtml] = "job.jobDesc"></div>
+        </div>
+    </div>
+    <button type="button" routerLink="/WorkExperience">Back To Jobs</button>
+</div>

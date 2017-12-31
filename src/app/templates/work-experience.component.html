@@ -1,0 +1,26 @@
+<h1>Work History</h1>
+
+<div class="row">
+    <blockquote cite="Author Unknown" [ngClass]="{'col-xs-11': true, 'pull-right': isScreenXS()}">
+        Every job is a self-portrait of the person who does it.
+        Autograph your work with excellence.
+        <small>Author Unknown</small>
+    </blockquote>
+</div>
+
+<div *ngFor="let job of jobs">
+    <h2>
+        <span>{{job.company}}</span><br />
+        <small>{{job.city}}, {{job.state}}</small>
+    </h2>
+    <h3>{{job.title}}</h3>
+    <h4>
+        {{job.startDate.toDateString()}} - 
+        <span *ngIf="job.endDate; then oldJob else currentJob"></span>
+    </h4>
+    <button type="button" 
+        (click) = "navigateTo(job)">Details</button>
+
+    <ng-template #currentJob>Current</ng-template>
+    <ng-template #oldJob>{{job.endDate.toDateString()}}</ng-template>
+</div>
